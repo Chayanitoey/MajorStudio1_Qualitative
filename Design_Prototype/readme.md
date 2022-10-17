@@ -28,7 +28,12 @@ There are total of 10 scenes in this prototype, the preferred dimension of scree
 As shown in figure 2.3, waste prevention starts with the reduced use of material resources in the production process. Once goods are consumed second-hand and remanufactured products can re-enter consumption streams or production processes. Material may also be re-used or recycled by producers directly in production processes. As goods are produced and consumed waste is generated, in which case it may be collected, treated, disposed, recovered or exported/imported either through waste management or illegal and uncontrolled activities. Waste may be exported for treatment and disposal rather than treated or disposed of in the country, and waste may be imported for treatment and disposal. Recovered waste provides secondary raw materials which flow back to production. Interaction between the (formal) waste management and uncontrolled and illegal waste activities can occur for example, with waste recovery from municipal disposal sites by uncontrolled waste pickers, which then re-enters the production processes.
 
 - [Report from UNstats.org](https://github.com/Chayanitoey/MajorStudio1_Qualitative/blob/92f68713e3d89a5d5fb6cdd1fdec788738726932/Design_Prototype/MS_3.3.1_3.3.2_Waste.pdf) - Manual on the Basic Set of Environment Statistics of the FDES 2013,Generation and Management of Waste. The data from this report is used to create informative description on the waste management process. 
-- [Municipal waste treatment (latest year)](https://github.com/Chayanitoey/MajorStudio1_Qualitative/blob/c3d15960a7fcf788388ebce6b72f66f159340053/Design_Prototype/Municipal%20waste%20treatment%20(latest%20year).xlsx)  - This file is downloaded from https://unstats.un.org/unsd/envstats/qindicators.cshtml, we will be using the percentage of waste per country by treatment in the data visualization. 
+- [Municipal waste treatment (latest year)](https://github.com/Chayanitoey/MajorStudio1_Qualitative/blob/c3d15960a7fcf788388ebce6b72f66f159340053/Design_Prototype/Municipal%20waste%20treatment%20(latest%20year).xlsx)  
+
+![image](https://github.com/Chayanitoey/MajorStudio1_Qualitative/blob/3c871e5a08f449a26abc1b1bea322db8f94039f8/Design_Prototype/DataExample.jpg)
+
+This file is downloaded from https://unstats.un.org/unsd/envstats/qindicators.cshtml, we will be using the percentage of waste per country by treatment in the data visualization. 
+
 ## Design Prototype
 [Link to prototype](https://www.figma.com/proto/iZpuN7po3fRje15Crstlfp/MajorStudio1--Qualitative-Project?page-id=1%3A15&node-id=22%3A6&viewport=228%2C625%2C0.36&scaling=contain&starting-point-node-id=22%3A6) 
 
