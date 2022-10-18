@@ -35,7 +35,7 @@ As shown in figure 2.3, waste prevention starts with the reduced use of material
 This file is downloaded from https://unstats.un.org/unsd/envstats/qindicators.cshtml, we will be using the percentage of waste per country by treatment in the data visualization. 
 
 ## Design Prototype
-[Link to prototype](https://www.figma.com/proto/iZpuN7po3fRje15Crstlfp/MajorStudio1--Qualitative-Project?page-id=1%3A15&node-id=22%3A6&viewport=228%2C625%2C0.36&scaling=contain&starting-point-node-id=22%3A6) 
+[Link to prototype](https://www.figma.com/proto/iZpuN7po3fRje15Crstlfp/MajorStudio1--Qualitative-Project?page-id=1%3A15&node-id=22%3A6&viewport=488%2C291%2C0.21&scaling=contain&starting-point-node-id=22%3A6) 
 
 
 
