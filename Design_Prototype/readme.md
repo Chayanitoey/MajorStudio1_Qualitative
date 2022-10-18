@@ -40,15 +40,7 @@ This file is downloaded from https://unstats.un.org/unsd/envstats/qindicators.cs
 
 
 ## Coding Progress
-
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
+planning to utilize d3.force's parameters as in this example on [Observable by Malik Koné](https://observablehq.com/@maliky/testing-the-d3-forces-parameters)
 
 
 ### Next steps :
