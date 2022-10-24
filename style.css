@@ -1,0 +1,515 @@
+@import url('http://fonts.cdnfonts.com/css/libre-franklin');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body, html {
+        width: 100%;
+        height: 100%;
+        background: #262626;
+
+		}
+
+		canvas {
+			position: absolute;
+			pointer-events: none;
+			margin-top:130px;
+
+		}
+
+		p {
+			width: 300px;
+		}
+
+		.input-text {
+			font-style: italic;
+		}
+
+		.source-info {
+			font-style: italic;
+			font-size: 11px;
+			color: #ddd;
+		}
+
+		/* D3 Relevant Styes */
+		svg {
+			position: absolute;
+			pointer-events: none;
+			margin-top:130px;
+		}
+
+		circle {
+			pointer-events: all;
+		}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #262626;
+  /*border-bottom: 5px solid #444;*/
+}
+
+section:nth-child(1) {
+  /*background-color: #55efc4;*/
+}
+
+section:nth-child(2) {
+  /*background-color: #81ecec;*/
+}
+
+section:nth-child(3) {
+  /*background-color: #74b9ff;*/
+}
+
+section:nth-child(4) {
+  /*background-color: #a29bfe;*/
+}
+
+section:nth-child(5) {
+  /*background-color: #ff7675;*/
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(calc(-50% + 3px), calc(50vh - 50%)) rotate(90deg);
+  width: 100vh;
+  height: 30px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #262626;
+}
+
+progress[value="100"]::-webkit-progress-bar {
+  background-color: #59F5FF;
+}
+
+progress::-webkit-progress-value {
+  background-color: #59F5FF;
+  /*border-bottom-right-radius: 5px;*/
+  /*border-top-right-radius: 5px;*/
+}
+text{
+     font-family: 'Libre Franklin', sans-serif;
+      background-color:#262626;
+      color:white;
+      font-size: 20px; 
+}
+h1{
+
+    font-size: 4vw;
+    font-family: 'Libre Franklin', sans-serif;
+    color:white;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20%;
+}
+
+h2{
+    
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 3vw;
+     width:50%;
+
+    color: #FAFAFA;
+    
+}
+
+.intro-text{
+    position: absolute;
+    width: 80%;
+    height: 347px;
+    left: 118px;
+    top: 340px;
+}
+.intro-text p{
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    
+    color: #FAFAFA;
+}
+#image_cover{
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 30%;
+
+}
+
+#myList{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    background-color: #666666;
+    color: #FAFAFA;
+    /*position: absolute;*/
+    width: 189px;
+    height: 33px;
+    left: 300%;
+    /*top: 300%;*/
+  
+}
+section.simulate{
+  margin-left: 5%;
+  margin-top: 20%;
+  height: 300px;
+/*  top: 1175px;*/
+
+}
+section.sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-left: 5%;
+  top:0;
+  height: 150px;
+  width:100%;
+  background-color: #262626;
+/*  top: 1175px;*/
+
+}
+
+.simulate h4{
+width: 100%;
+height: 100%;
+left:500px;
+font-family: 'Libre Franklin', sans-serif;
+color:white;
+font-style: normal;
+font-weight: 600;
+font-size: 3.5vw; 
+ line-height: 4vw;
+
+}
+
+#myList{
+font-family: 'Libre Franklin', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FAFAFA;
+}
+.container{
+width: 100%;
+height: 100%;
+}
+
+#circle_text{
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 1.5vw;
+  line-height: 24px;
+  color: #FAFAFA;
+  /*margin-left: 10%;*/
+}
+
+
+.infobox{
+ position: absolute;
+ margin-top: 300px;
+ font-size: 1vw;
+ margin-left: 50%;
+ font-family: 'Lato', sans-serif;
+ color: #59F5FF;
+
+}
+
+
+
+#graphsection{
+  margin-top:40%;
+  width:80%;
+}
+
+/*testing the scrollmagic*/
+	#reveal{
+				opacity: 0;
+				-webkit-transform: scale(0.9);
+					 -moz-transform: scale(0.9);
+						-ms-transform: scale(0.9);
+						 -o-transform: scale(0.9);
+								transform: scale(0.9);
+				-webkit-transition: all 1s ease-in-out;
+					 -moz-transition: all 1s ease-in-out;
+						-ms-transition: all 1s ease-in-out;
+						 -o-transition: all 1s ease-in-out;
+								transition: all 1s ease-in-out;
+			}
+			#reveal.visible {
+				opacity: 1;
+				margin-left: 15%;
+				width: 30%;
+        height:600px;
+				background: rgba(66, 37, 107, 0.7);
+        border-radius: 49px;
+
+        font-family: 'Lato', sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FAFAFA;
+				
+				-webkit-transform: none;
+					 -moz-transform: none;
+						-ms-transform: none;
+						 -o-transform: none;
+								transform: none;
+			}
+			#reveal p{
+			  width:80%;
+			  margin: 10%;
+        padding-top: 10%;
+
+			}
+
+/*reveal the waste pretratement*/
+	#reveal2{
+				opacity: 0;
+				-webkit-transform: scale(0.9);
+					 -moz-transform: scale(0.9);
+						-ms-transform: scale(0.9);
+						 -o-transform: scale(0.9);
+								transform: scale(0.9);
+				-webkit-transition: all 1s ease-in-out;
+					 -moz-transition: all 1s ease-in-out;
+						-ms-transition: all 1s ease-in-out;
+						 -o-transition: all 1s ease-in-out;
+								transition: all 1s ease-in-out;
+			}
+			#reveal2.visible {
+				opacity: 1;
+				color:white;
+				position: absolute;
+				margin-top:700px;
+				margin-left:15%;
+				width: 30%;
+        height:350px;
+        background: rgba(66, 37, 107, 0.7);
+        border-radius: 49px;
+        
+        
+        font-family: 'Lato', sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FAFAFA;
+
+				-webkit-transform: none;
+					 -moz-transform: none;
+						-ms-transform: none;
+						 -o-transform: none;
+								transform: none;
+			}
+			#reveal2 p{
+			  width:80%;
+			  margin: 10%;
+        padding-top: 3%;
+
+			}
+/*reveal waste tratement*/
+	#reveal3{
+				opacity: 0;
+				-webkit-transform: scale(0.9);
+					 -moz-transform: scale(0.9);
+						-ms-transform: scale(0.9);
+						 -o-transform: scale(0.9);
+								transform: scale(0.9);
+				-webkit-transition: all 1s ease-in-out;
+					 -moz-transition: all 1s ease-in-out;
+						-ms-transition: all 1s ease-in-out;
+						 -o-transition: all 1s ease-in-out;
+								transition: all 1s ease-in-out;
+			}
+			#reveal3.visible {
+				opacity: 1;
+				color:white;
+				position: absolute;
+				margin-top:1200px;
+				margin-left: 40%;
+				
+				width: 35%;
+        height:533px;
+        background: rgba(66, 37, 107, 0.7);
+        border-radius: 49px;
+        
+        
+        font-family: 'Lato', sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FAFAFA;
+
+				-webkit-transform: none;
+					 -moz-transform: none;
+						-ms-transform: none;
+						 -o-transform: none;
+								transform: none;
+			}
+			#reveal3 p{
+			  width:80%;
+			  margin: 10%;
+        padding-top: 3%;
+
+			}
+	/*reveal waste recovery*/
+	#reveal4{
+				opacity: 0;
+				-webkit-transform: scale(0.8);
+					 -moz-transform: scale(0.8);
+						-ms-transform: scale(0.8);
+						 -o-transform: scale(0.8);
+								transform: scale(0.8);
+				-webkit-transition: all 0.8s ease-in-out;
+					 -moz-transition: all 0.8s ease-in-out;
+						-ms-transition: all 0.8s ease-in-out;
+						 -o-transition: all 0.8s ease-in-out;
+								transition: all 0.8s ease-in-out;
+			}
+			#reveal4.visible {
+				opacity: 1;
+				color:white;
+				position: absolute;
+				margin-top:1400px;
+				margin-left:50%;
+				
+				
+						
+				width: 30%;
+        height:600px;
+        background: rgba(66, 37, 107, 0.7);
+        border-radius: 49px;
+        
+        
+        font-family: 'Lato', sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FAFAFA;
+
+				-webkit-transform: none;
+					 -moz-transform: none;
+						-ms-transform: none;
+						 -o-transform: none;
+								transform: none;
+			}
+		 #reveal4 p{
+			  width:80%;
+			  margin: 10%;
+        padding-top: 3%;
+
+			}
+	
+	/*reveal waste disposal*/
+
+			#reveal5{
+				opacity: 0;
+				-webkit-transform: scale(0.8);
+					 -moz-transform: scale(0.8);
+						-ms-transform: scale(0.8);
+						 -o-transform: scale(0.8);
+								transform: scale(0.8);
+				-webkit-transition: all 0.8s ease-in-out;
+					 -moz-transition: all 0.8s ease-in-out;
+						-ms-transition: all 0.8s ease-in-out;
+						 -o-transition: all 0.8s ease-in-out;
+								transition: all 0.8s ease-in-out;
+			}
+			#reveal5.visible {
+				opacity: 1;
+				color:white;
+				position: absolute;
+				margin-top:1600px;
+				margin-left:10%;
+				
+									
+				width: 30%;
+        height:700px;
+        background: rgba(66, 37, 107, 0.7);
+        border-radius: 49px;
+        
+        
+        font-family: 'Lato', sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FAFAFA;
+
+				-webkit-transform: none;
+					 -moz-transform: none;
+						-ms-transform: none;
+						 -o-transform: none;
+								transform: none;
+			}
+			#reveal5 p{
+			  width:80%;
+			  margin: 10%;
+        padding-top: 3%;
+
+			}
+
+.svg-container svg text{
+  opacity: 0.3;
+}
+
+#Collection.visible{
+  opacity: 1;
+}
+#ExportedWaste.visible{
+  opacity: 1;
+}
+#WastePre-Treatment.visible{
+  opacity: 1;
+}
+#BiologicalTreatment.visible{
+  opacity: 1;
+}
+#Sorting.visible{
+  opacity: 1;
+}
+#WasteTreatment.visible{
+  opacity: 1;
+}
+#Incinerationtogenerateenergy.visible{
+  opacity: 1;
+}
+#Composting.visible{
+  opacity: 1;
+}
+#WasteRecovery.visible{
+  opacity: 1;
+}
+#Recycling.visible{
+  opacity: 1;
+}
+#Re-Use.visible{
+  opacity: 1;
+}
+
+#WasteDisposal.visible{
+  opacity: 1;
+}
+#Landfill.visible{
+  opacity: 1;
+}
+#Incineration.visible{
+  opacity: 1;
+}
+#Other.visible{
+  opacity: 1;
+}

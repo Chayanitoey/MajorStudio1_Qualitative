@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>Where Do Your Trash Go?</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	 <script src="https://d3js.org/d3.v4.js"></script>
+	 <script src="https://d3js.org/d3.v7.min.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/d3-dispatch@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
+	 <script src ="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+   <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"> </script>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel= "stylesheet" href = "style.css">
+</head>
+<body>
+
+    <article>
+    <!--intro section--> 
+        	<section>
+        	    <div class = "intro-text"> 
+        	    <h1>Where Do Your Trash Go?</h1>
+        	    <h2>Tracing the journey of ‘ trash ’ from your bin to the its final destination*</h2>
+        	    <p>
+        	      ** I'm baby blue bottle PBR&B blog mixtape chillwave iPhone chia adaptogen bicycle rights ennui. 
+        	      Swag artisan selvage, yr offal marfa flexitarian fingerstache. Venmo tumblr readymade dreamcatcher 8-bit.
+        	      Squid DSA williamsburg keytar. Mustache food truck YOLO kitsch echo park squid flexitarian try-hard gluten-free palo santo sus.
+        	      Humblebrag tattooed poke, yr letterpress kinfolk gentrify succulents sriracha poutine small batch green juice mlkshk knausgaard.
+        	    </p>
+        	    
+        	    </div>
+        	    <div id ="image_cover">
+        	        <img src="Asset/cover.svg"></img>
+        	</section>
+   <!--choosing your country section--> 
+
+             <section class = "simulate"> 
+        	   <h4> Let’s simulate your  trash journey...<div style="color:#59F5FF;">Choose your country </div>and start the journey.</h4>
+        	 </section>
+        	 
+        	 <section class = "sticky">
+        	       <h2> Your Location : </h2>
+        	     <Select id="myList" onChange="getListValue();" >
+                     <option value="none" selected disabled hidden>Select country</option>
+               </select>
+        	 </section>
+        	   
+        	<section>
+        
+        	     <div class = "infobox"style="visibility: hidden;"> 
+        		<b>1 blue dot equals 1 Kilogram!</b>
+        		</div>
+        		<div class = "container"></div>
+
+        	</section>
+    <!--floating chart section--> 
+        	<section id = 'graphsection'> 
+        	    <canvas id='graph-canvas'></canvas>
+        	    <div class="svg-container">
+        	    </div>
+        	    <div id="reveal">
+                <p>First Step is the <b>‘Waste Collection’</b> : 
+                <br><br>
+                In year <b id = 'year'>YEAR</b>, <b id = 'countryName'>COUNTRYNAME</b> has a total of <b id ='wasteCollected'></b> tonnes of municipal waste collected.
+                Waste generated is not always collected by waste collection services, and it may be treated or disposed of by the economic units or households.
+                Therefore, the amount of generated waste is often larger than the amount of formally collected waste.
+                 <br><br>
+                <b>From 'Waste Collection' to 'Exportation'</b>
+                 <br><br>
+                <b id = 'countryName1'>COUNTRYNAME</b> has exported about <b id = 'exportWaste'>0</b> percent in  <b id = 'year1'></b>. 
+                Every year, thousands of shipping containers 
+                filled with recyclable waste are exported by wealthy countries to developing countries. This is because it is typically cheaper to export waste rather than develop local recycling infrastructures. 
+                It also reduces landfilling and can be lucrative for importers.
+  
+
+                </p>
+              	</div>
+              	<div id="reveal2">
+                 <p> <b>Waste Pretreatment</b>
+                 <br><br>
+                   The pretreatment processes are relatively straightforward and involve several stages of sorting, separating, size reduction, and in some cases, biological treatment. Capital costs for the pretreatment systems are moderate and generally worth the benefit of making a low-cost, readily available feedstock stream available 
+              	</p>
+              	</div>
+                <div id="reveal3">
+                <p>
+                    <b>Waste Treatment</b>
+                    <br><br>
+                    <b>Incineration to generate energy :</b>
+                     <br><br>
+                      consists in the controlled combustion of waste with energy recovery. Energy recovery means that evolving thermal energy is used for the production of steam, hot water or electric energy.                
+                    <br><br>
+                    <b>Composting : </b>
+                      <br><br>
+                    refers to a biological process that submits biodegradable waste to anaerobic (biomethanization) or aerobic decomposition, and that results in a product that is recovered and can be used to increase soil fertility (products are compost and biogas).
+                </p>
+              	</div>
+              	<div id="reveal4">
+                <p> <b>Waste Recovery : </b>
+                 <br><br>
+                 <b>Recovery</b>
+                  <br><br>
+                  is defined as any waste management operation that diverts a waste material from the waste stream and which results in a certain product with a potential economic or ecological benefit. Recovery mainly refers to the following operations: material recovery, i.e., recycling, energy recovery, i.e., re-use as fuel, biological recovery, e.g., composting, methanisation and re-use.
+                    <br><br>
+                  <b>Recycling</b>
+                  <br><br>
+                   defined as any reprocessing of material in a production process that diverts it from the waste stream, except reuse as fuel. Both reprocessing as the same type of product, and for different purposes should be included.
+                </p>
+
+              	</div>
+              	 <div id="reveal5">
+              	 <p> <b>Waste Diposal : </b>
+                 <br><br>
+                 <b>Landfill</b>
+                  <br><br>
+                  The final placement of waste into or onto the land in a controlled or uncontrolled way. The definition covers both landfilling in internal sites (i.e., where a generator of waste is carrying out its own waste disposal at the place of generation) and in external sites.                    <br><br>
+                  <b>Incineration</b>
+                  <br><br>
+                    consists in the controlled combustion of waste without energy recovery. 
+                  <br><br>
+                  <b>Incineration</b>
+                  <br><br>
+                    Any final treatment or disposal different from recycling, incineration and landfilling. Examples include physical/chemical treatment, biological treatment, releasing of waste into water bodies and permanent storage.                  
+                    </p>
+              	     
+              	</div>
+              
+        	</section>
+            <!--Sankey Summary Section-->
+             <!--Maybe showing all countries Section-->
+        	<section></section>
+        	
+     <!--extra section if needed
+        	<section></section>-->
+    </article>
+            
+
+     <!-- adding scrooll bar to show progress -->
+    <progress min="0" max="100" value="0"></progress>
+    <!-- partial -->
+    <script  src="app.js"></script>
+    
+    <!--float chart-->
+    <!--summary sankey chart-->
+    
+ 
+</body>
+</html>
