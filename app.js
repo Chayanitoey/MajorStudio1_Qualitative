@@ -1,7 +1,3 @@
-
-
-
-
 //first add scroll to show progress bar
 const progressbar = document.querySelector('progress');
 const article = document.querySelector('article');
