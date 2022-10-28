@@ -26,6 +26,9 @@ function render() {
 
 
 var w = window.innerWidth;
+// var h = 2080;
+
+// var w = screen.width;
 var h = 2080;
 
 //making the country list 
@@ -573,12 +576,12 @@ function createCircle(data){
 		.each( function(d) { // DO NOT CONVERT TO ARROW FUNCTION, `this` will not bind, and you won't be able to access the SVG path properly
 
 			// the `x` limit controls the frequency per second
-			for (let x = 0; x < 3; x++) {
+			for (let x = 0; x < 2; x++) {
 			  const offset = (Math.random() * d.value - d.value/2);
 			 // const offset = d.value;
 
 			  // The higher the multiplied Math.random(), the less particles (because the probability is lower that there will be a decimal smaller than the d.freq)
-			  if (Math.random() * 10 < d.freq) {
+			  if (Math.random() * 40 < d.freq) {
 
 				const length = this.getTotalLength();
 
@@ -590,7 +593,7 @@ function createCircle(data){
 				  path: this,
 				  length,
 				  animateTime: length,
-				  speed: .5
+				  speed: .4
 				});
 			  }
 			}
@@ -611,7 +614,7 @@ function createCircle(data){
 	  for (const p in particles){
 		if( {}.hasOwnProperty.call(particles, p) ){
 		  const currentTime = elapsed - particles[p].time;
-		  particles[p].current = currentTime * 0.15 * particles[p].speed;
+		  particles[p].current = currentTime * 0.20 * particles[p].speed;
 
 		  // CAUTION: .getPointAtLength has been deprecated and does not work on Safari
 		  // MDN: https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getPointAtLength#Browser_compatibility
@@ -620,14 +623,28 @@ function createCircle(data){
 
 		  // Draw the particles
 		  context.beginPath();
-		  context.arc( // creates a circle in canvas
-			currentPos.x + margin.left, // Add particles[p].offset for displacement
-			currentPos.y + margin.top,
-			particles[p].link.particleSize, // radius of circle
-			0, // circle starting position
-			10 * Math.PI  // circle ending position
-		  );
-		  context.lineWidth = 4;
+		  
+		 // context.arc( // creates a circle in canvas
+			// currentPos.x + margin.left, // Add particles[p].offset for displacement
+			// currentPos.y + margin.top,
+			// particles[p].link.particleSize, // radius of circle
+			// 0, // circle starting position
+			// 10 * Math.PI  // circle ending position
+		 // );
+		 
+		 //make rect instead of circle
+		  
+		  context.rect(
+		  	currentPos.x + margin.left,
+		  	currentPos.y + margin.top,
+		  	particles[p].link.particleSize,
+		  	particles[p].link.particleSize,
+		  	0,
+		  	10 * Math.PI 
+		  	);
+		  
+		  
+		  context.lineWidth = 0;
 		  //context.stroke();
 		  context.fill();
 
