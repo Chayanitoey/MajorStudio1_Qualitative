@@ -121,6 +121,17 @@ h2{
     color: #FAFAFA;
     
 }
+h5{
+    
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8vw;
+    line-height: 1vw;
+    width:50%;
+    margin-left: 8%;
+    color: #FAFAFA;
+}
 
 .intro-text{
     position: absolute;
@@ -144,7 +155,7 @@ h2{
 }
 #image_cover{
   position: absolute;
-  margin-left: 40%;
+  margin-left: 50%;
   margin-top: 30%;
 
 }
@@ -167,7 +178,7 @@ h2{
 section.simulate{
   margin-left: 5%;
   margin-top: 20%;
-  height: 300px;
+  height: 320px;
 /*  top: 1175px;*/
 
 }
@@ -207,7 +218,7 @@ color: #FAFAFA;
 }
 .container{
 width: 100%;
-height: 100%;
+height: 50%;
 }
 
 #circle_text{
@@ -222,7 +233,7 @@ height: 100%;
 
 .infobox{
  position: absolute;
- margin-top: 300px;
+ margin-top: 900px;
  font-size: 1vw;
  margin-left: 50%;
  font-family: 'Lato', sans-serif;
@@ -233,8 +244,9 @@ height: 100%;
 
 
 #graphsection{
-  margin-top:40%;
+  margin-top:10%;
   width:80%;
+  height: 3000px;
 }
 
 /*testing the scrollmagic*/
@@ -254,15 +266,16 @@ height: 100%;
 			#reveal.visible {
 				opacity: 1;
 				margin-left: 15%;
-				width: 30%;
+				margin-top:200px;
+				width: 35%;
         height:600px;
-				background: rgba(66, 37, 107, 0.7);
+				background: rgba(91, 88, 88, 0.47);
         border-radius: 49px;
 
         font-family: 'Lato', sans-serif;
         font-weight: 200;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 25px;
+        line-height: 30px;
         color: #FAFAFA;
 				
 				-webkit-transform: none;
@@ -296,18 +309,18 @@ height: 100%;
 				opacity: 1;
 				color:white;
 				position: absolute;
-				margin-top:700px;
-				margin-left:15%;
-				width: 30%;
-        height:350px;
-        background: rgba(66, 37, 107, 0.7);
+				margin-top:500px;
+				margin-left:8%;
+				width: 20%;
+        height:400px;
+        background: rgba(91, 88, 88, 0.47);
         border-radius: 49px;
         
         
         font-family: 'Lato', sans-serif;
         font-weight: 200;
-        font-size: 20px;
-        line-height: 24px;
+       font-size: 25px;
+        line-height: 30px;
         color: #FAFAFA;
 
 				-webkit-transform: none;
@@ -319,7 +332,6 @@ height: 100%;
 			#reveal2 p{
 			  width:80%;
 			  margin: 10%;
-        padding-top: 3%;
 
 			}
 /*reveal waste tratement*/
@@ -340,19 +352,19 @@ height: 100%;
 				opacity: 1;
 				color:white;
 				position: absolute;
-				margin-top:1200px;
-				margin-left: 40%;
+				margin-top:1050px;
+				margin-left:50%;
 				
 				width: 35%;
-        height:533px;
-        background: rgba(66, 37, 107, 0.7);
+        height:600px;
+        background: rgba(91, 88, 88, 0.47);
         border-radius: 49px;
         
         
         font-family: 'Lato', sans-serif;
         font-weight: 200;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 25px;
+        line-height: 30px;
         color: #FAFAFA;
 
 				-webkit-transform: none;
@@ -364,56 +376,10 @@ height: 100%;
 			#reveal3 p{
 			  width:80%;
 			  margin: 10%;
-        padding-top: 3%;
+			  padding-bottom: 2%;
 
 			}
-	/*reveal waste recovery*/
-	#reveal4{
-				opacity: 0;
-				-webkit-transform: scale(0.8);
-					 -moz-transform: scale(0.8);
-						-ms-transform: scale(0.8);
-						 -o-transform: scale(0.8);
-								transform: scale(0.8);
-				-webkit-transition: all 0.8s ease-in-out;
-					 -moz-transition: all 0.8s ease-in-out;
-						-ms-transition: all 0.8s ease-in-out;
-						 -o-transition: all 0.8s ease-in-out;
-								transition: all 0.8s ease-in-out;
-			}
-			#reveal4.visible {
-				opacity: 1;
-				color:white;
-				position: absolute;
-				margin-top:1400px;
-				margin-left:50%;
-				
-				
-						
-				width: 30%;
-        height:600px;
-        background: rgba(66, 37, 107, 0.7);
-        border-radius: 49px;
-        
-        
-        font-family: 'Lato', sans-serif;
-        font-weight: 200;
-        font-size: 20px;
-        line-height: 24px;
-        color: #FAFAFA;
 
-				-webkit-transform: none;
-					 -moz-transform: none;
-						-ms-transform: none;
-						 -o-transform: none;
-								transform: none;
-			}
-		 #reveal4 p{
-			  width:80%;
-			  margin: 10%;
-        padding-top: 3%;
-
-			}
 	
 	/*reveal waste disposal*/
 
@@ -434,20 +400,20 @@ height: 100%;
 				opacity: 1;
 				color:white;
 				position: absolute;
-				margin-top:1600px;
-				margin-left:10%;
+				margin-top:1500px;
+				margin-left:9%;
 				
 									
 				width: 30%;
-        height:700px;
-        background: rgba(66, 37, 107, 0.7);
+        height:850px;
+        background: rgba(91, 88, 88, 0.47);
         border-radius: 49px;
         
         
         font-family: 'Lato', sans-serif;
         font-weight: 200;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 25px;
+        line-height: 30px;
         color: #FAFAFA;
 
 				-webkit-transform: none;
@@ -512,4 +478,83 @@ height: 100%;
 }
 #Other.visible{
   opacity: 1;
+}
+
+#all_country{
+    margin-top:1400px;
+    margin-left: 10%
+}
+/*#allCountry_canvas{*/
+/*  width:1920px;*/
+/*  heigh:1080px;*/
+/*}*/
+
+#graphsection h2{
+  margin-left: 8%;
+}
+
+
+#textdesc{
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 10%;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 40px;
+  color: #FAFAFA;
+  
+  width: 20%;
+  height:600px;
+  background: rgba(91, 88, 88, 0.47);
+  border-radius: 49px;
+  
+
+}
+#textdesc p {
+  width:80%;
+  margin-left: 10%;
+  padding: 3%;
+}
+li {
+  margin-left: 10%;
+}
+
+
+/*for footer*/
+
+.creditcenter{
+  width:50%;
+  text-align:left;
+  margin-left:30%;
+  margin-top: 10%;
+}
+.headcredit{
+ font-size: 50%;
+ margin-top: 30px;
+ color:#262626;
+ font-weight: bold;
+  /*margin-bottom: 30%;*/
+}
+.little_credit{
+  color:#FAFAFA;
+  font-weight: lighter;
+}
+
+#acknowledgement{
+  margin-top: 10%;
+  background-color: #180945;
+  width:100%;
+  height: 100vh;
+  font-size: 1.6vw;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  position: absolute;
+}
+
+a:link {
+  color:#59F5FF;
+}
+a:visited {
+  color:#59F5FF;
 }

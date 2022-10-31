@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
 	 <script src ="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-   <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"> </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"> </script>
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel= "stylesheet" href = "style.css">
 </head>
@@ -24,10 +24,10 @@
         	    <h1>Where Do Your Trash Go?</h1>
         	    <h2>Tracing the journey of ‘ trash ’ from your bin to the its final destination*</h2>
         	    <p>
-        	      ** I'm baby blue bottle PBR&B blog mixtape chillwave iPhone chia adaptogen bicycle rights ennui. 
-        	      Swag artisan selvage, yr offal marfa flexitarian fingerstache. Venmo tumblr readymade dreamcatcher 8-bit.
-        	      Squid DSA williamsburg keytar. Mustache food truck YOLO kitsch echo park squid flexitarian try-hard gluten-free palo santo sus.
-        	      Humblebrag tattooed poke, yr letterpress kinfolk gentrify succulents sriracha poutine small batch green juice mlkshk knausgaard.
+        	     Have you ever wondered where the things you threw in the trash end up at?<br>
+        	     How does our waste management system even work? In this 'data-viz-article', we will explore the small version of waste management system and learn where the waste we generated end up at each destination; from landfill to composting. 
+        	     Each country often has a very unique system due to its waste management system and amount of waste generated, either from housholds or commercial entities. 
+        	     Because we want to compare globally and see many countries all at once, the waste management process needed to be generalized and simplified for better comprehension...
         	    </p>
         	    
         	    </div>
@@ -48,30 +48,28 @@
         	 </section>
         	   
         	<section>
-        
         	     <div class = "infobox"style="visibility: hidden;"> 
         		<b>1 blue dot equals 1 Kilogram!</b>
         		</div>
         		<div class = "container"></div>
-
         	</section>
     <!--floating chart section--> 
         	<section id = 'graphsection'> 
+        	<h2>Here is a snapshot how waste management process in many countries looks like ... </h2>
+        	<h5>Note : these steps are not inclusive, for many countries, the waste management maybe handled by private waste companies, thus data accuracy is not confirmed.</h5>
         	    <canvas id='graph-canvas'></canvas>
         	    <div class="svg-container">
         	    </div>
         	    <div id="reveal">
                 <p>First Step is the <b>‘Waste Collection’</b> : 
                 <br><br>
-                In year <b id = 'year'>YEAR</b>, <b id = 'countryName'>COUNTRYNAME</b> has a total of <b id ='wasteCollected'></b> tonnes of municipal waste collected.
+                <!--In year <b id = 'year'>YEAR</b>, <b id = 'countryName'>COUNTRYNAME</b> has a total of <b id ='wasteCollected'></b> tonnes of municipal waste collected.-->
                 Waste generated is not always collected by waste collection services, and it may be treated or disposed of by the economic units or households.
                 Therefore, the amount of generated waste is often larger than the amount of formally collected waste.
                  <br><br>
                 <b>From 'Waste Collection' to 'Exportation'</b>
                  <br><br>
-                <b id = 'countryName1'>COUNTRYNAME</b> has exported about <b id = 'exportWaste'>0</b> percent in  <b id = 'year1'></b>. 
-                Every year, thousands of shipping containers 
-                filled with recyclable waste are exported by wealthy countries to developing countries. This is because it is typically cheaper to export waste rather than develop local recycling infrastructures. 
+                 Every year, thousands of shipping containers filled with recyclable waste are exported by wealthy countries to developing countries. This is because it is typically cheaper to export waste rather than develop local recycling infrastructures. 
                 It also reduces landfilling and can be lucrative for importers.
   
 
@@ -96,21 +94,22 @@
                     refers to a biological process that submits biodegradable waste to anaerobic (biomethanization) or aerobic decomposition, and that results in a product that is recovered and can be used to increase soil fertility (products are compost and biogas).
                 </p>
               	</div>
-              	<div id="reveal4">
-                <p> <b>Waste Recovery : </b>
-                 <br><br>
-                 <b>Recovery</b>
-                  <br><br>
-                  is defined as any waste management operation that diverts a waste material from the waste stream and which results in a certain product with a potential economic or ecological benefit. Recovery mainly refers to the following operations: material recovery, i.e., recycling, energy recovery, i.e., re-use as fuel, biological recovery, e.g., composting, methanisation and re-use.
-                    <br><br>
-                  <b>Recycling</b>
-                  <br><br>
-                   defined as any reprocessing of material in a production process that diverts it from the waste stream, except reuse as fuel. Both reprocessing as the same type of product, and for different purposes should be included.
-                </p>
+              	
+              	<!--<div id="reveal4">-->
+               <!-- <p> <b>Waste Recovery : </b>-->
+               <!--  <br><br>-->
+               <!--  <b>Recovery</b>-->
+               <!--   <br><br>-->
+               <!--   is defined as any waste management operation that diverts a waste material from the waste stream and which results in a certain product with a potential economic or ecological benefit. Recovery mainly refers to the following operations: material recovery, i.e., recycling, energy recovery, i.e., re-use as fuel, biological recovery, e.g., composting, methanisation and re-use.-->
+               <!--     <br><br>-->
+               <!--   <b>Recycling</b>-->
+               <!--   <br><br>-->
+               <!--    defined as any reprocessing of material in a production process that diverts it from the waste stream, except reuse as fuel. Both reprocessing as the same type of product, and for different purposes should be included.-->
+               <!-- </p>-->
 
-              	</div>
+              	<!--</div>-->
               	 <div id="reveal5">
-              	 <p> <b>Waste Diposal : </b>
+              	 <p> <b>Waste Diposal & Waste Recovery : </b>
                  <br><br>
                  <b>Landfill</b>
                   <br><br>
@@ -119,7 +118,7 @@
                   <br><br>
                     consists in the controlled combustion of waste without energy recovery. 
                   <br><br>
-                  <b>Incineration</b>
+                  <b>Waste Recovery</b>
                   <br><br>
                     Any final treatment or disposal different from recycling, incineration and landfilling. Examples include physical/chemical treatment, biological treatment, releasing of waste into water bodies and permanent storage.                  
                     </p>
@@ -129,10 +128,63 @@
         	</section>
             <!--Sankey Summary Section-->
              <!--Maybe showing all countries Section-->
-        	<section></section>
+        	<section id ='all_country'>
+        	    <h2>This diagram below shows the flow of total waste in  <b id = 'countryName'></b> generated by its population in <b id = 'year'></b>.</h2>
+        	    <canvas id='allCountry_canvas'> </canvas>
+        	    <svg id='svg_sankey'> </svg>
+        	    <div id ='textdesc'>
+        	        <p>
+        	        Total of <b id ='wasteCollected'></b> KG of waste generated ends up being : 
+        	        <li> Landfilled :  <b id ='landFill'>0</b> %</li>
+        	        <li> Incinerated : <b id ='incinerate'>0</b> %</li>
+        	        <li> Recycled : <b id ='recycled'>0</b> %</li>
+        	        <li> Composted : <b id ='composted'>0</b> %</li>
+        	        <li> Re-used : <b id ='re_use'>0</b> %</li>
+        	        <li> Incenerated to generat energy : <b id ='incinerateToEnergy'>0</b> %</li>
+        	        <li> Exported: <b id ='exportWaste'>0</b> %</li>
+        	        </p>
+        	    </div>
+        	</section>
         	
-     <!--extra section if needed
-        	<section></section>-->
+        	<section id="acknowledgement"> 
+                  <div class="creditcenter">
+                      <div class="headcredit">
+                          <a style=" background-color: #CDF449;">Data and Methods:</a>
+                          <div class ="little_credit">
+                            Data in this project are mainly from U.N. data portal publicly available online, see the resources in the further links section. 
+                            All documents are publicly available on <a href="https://github.com/Chayanitoey/MajorStudio1_Qualitative">Github.</a>
+                          </div>
+                      </div>
+                     <div class="headcredit">
+                         <a style=" background-color: #CDF449;">Special Thanks:</a>
+                          <div class ="little_credit">
+                            This assignment is part of qualitative assignment under Major Studio 1, Fall 2022 course at Parsons School of Design, taught by Richard The. 
+                          </div>
+                     </div>
+                      <div class="headcredit">
+                         <a style=" background-color: #CDF449;">Further Links:</a>
+                         <div class ="little_credit">
+                            <li><a href="https://datacatalog.worldbank.org/search/dataset/0039597">
+                            https://datacatalog.worldbank.org/search/dataset/0039597</a></li> 
+                            <li><a href="https://sensoneo.com/global-waste-index/">https://sensoneo.com/global-waste-index/</a></li> 
+                            <li><a href="https://unstats.un.org/sdgs/dataportal/database">https://unstats.un.org/sdgs/dataportal/database</a></li> 
+                            <li><a href="https://www.fashionrevolution.org/waste-is-it-really-in-fashion/">https://www.fashionrevolution.org/waste-is-it-really-in-fashion/</a></li> 
+                            <li><a href="https://olc.worldbank.org/content/solid-waste-management-swm-korea-learning-series">https://olc.worldbank.org/content/solid-waste-management-swm-korea-learning-series</a></li> 
+                            <li><a href="http://www.atlas.d-waste.com">http://www.atlas.d-waste.com</a></li> 
+                            <li><a href="https://unstats.un.org/unsd/envstats/fdes/manual_bses.cshtml">https://unstats.un.org/unsd/envstats/fdes/manual_bses.cshtml</a></li> 
+                    
+                          </div>
+                     </div>
+                      <div class="headcredit">
+                         <a style=" background-color: #CDF449;">Contact:</a>
+                         <div class ="little_credit">
+                            For further questions, please reach me via twitter <a href="#">@chayantoey</a>  and email: <a href="mailto:chayanit@newschool.edu">chayanit@newschool.edu </a> .
+                          </div>
+                     </div>
+                 
+                 </div>
+        	</section>
+
     </article>
             
 
@@ -140,10 +192,12 @@
     <progress min="0" max="100" value="0"></progress>
     <!-- partial -->
     <script  src="app.js"></script>
-    
-    <!--float chart-->
-    <!--summary sankey chart-->
-    
+        
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.0/d3.min.js'></script>
+<script src='d3.sankey.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js'></script>
+
+
  
 </body>
 </html>
