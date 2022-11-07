@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-transition@3"></script>
 	 <script src ="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"> </script>
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -22,29 +23,42 @@
         	<section>
         	    <div class = "intro-text"> 
         	    <h1>Where Does Your Trash Go?</h1>
-        	    <h2>Tracing the journey of ‘ trash ’ from your bin to the its final destination*</h2>
+        	    <h2  style="color:#59F5FF;" >Tracing the journey of garbage from your bin to its final destination.</h2>
         	    <p>
         	     Have you ever wondered where the things you threw in the trash end up at?<br>
         	     How does our waste management system even work? In this 'data-viz-article', we will explore the small version of waste management system and learn where the waste we generated end up at each destination; from landfill to composting. 
+        	     <br>
+        	     <br>
         	     Each country often has a very unique system due to its waste management system and amount of waste generated, either from housholds or commercial entities. 
         	     Because we want to compare globally and see many countries all at once, the waste management process needed to be generalized and simplified for better comprehension...
         	    </p>
         	    
         	    </div>
         	    <div id ="image_cover">
-        	        <img src="Asset/cover.svg"></img>
+        	        <img src="Asset/cute_monster.gif"></img>
+        	        <p>Image Source: <a href="https://www.nytimes.com/2017/06/02/nyregion/compost-organic-recycling-new-york-city.html">New York Times</a> / The Joren Cull Company</p>
+        	    </div>
+        	    	  <div class="box">
+                		<span></span>
+                		<span></span>
+                		<span></span>
+                	  </div>
         	</section>
    <!--choosing your country section--> 
 
              <section class = "simulate"> 
-        	   <h4> Let’s simulate your  trash journey...<div style="color:#59F5FF;">Choose your country </div>and start the journey.</h4>
+        	   <h4> First, let’s see how much <b style="color:#59F5FF;">trash you generate per year*</b>
+        	   <div  style="font-size:1vw;font-weight: 100; "> *Number is calculated by the municipal waste generated per capita from each country.
+        	   </div>
+        	   </h4>
         	 </section>
         	 
         	 <section class = "sticky">
-        	       <h2> Your Location : </h2>
-        	     <Select id="myList" onChange="getListValue();" >
+        	       <h2 > Select your country 
+        	     <select id="myList" onChange="getListValue();" >
                      <option value="none" selected disabled hidden>Select country</option>
                </select>
+               </h2>
         	 </section>
         	   
         	<section>
@@ -55,43 +69,43 @@
         	</section>
     <!--floating chart section--> 
         	<section id = 'graphsection'> 
-        	<h2>Here is a snapshot how waste management process in many countries looks like ... </h2>
-        	<h5>Note : these steps are not inclusive, for many countries, the waste management maybe handled by private waste companies, thus data accuracy is not confirmed.</h5>
+        	<h2>Waste Management Process in <b id= 'countryName1'>Your Country</b>.
+        	  <div  style="font-size:1vw;font-weight: 100;line-height:1.3vw; width:80%;"> *These steps are not inclusive, for many countries, the waste management maybe handled by private waste companies, thus data accuracy is not confirmed.
+        	   </div>
+        	</h2>
         	    <canvas id='graph-canvas'></canvas>
         	    <div class="svg-container">
         	    </div>
         	    <div id="reveal">
-                <p>First Step is the <b>‘Waste Collection’</b> : 
+                <p><b style="font-size:1.5vw;font-weight: 400; ">Collection</b> 
                 <br><br>
-                <!--In year <b id = 'year'>YEAR</b>, <b id = 'countryName'>COUNTRYNAME</b> has a total of <b id ='wasteCollected'></b> tonnes of municipal waste collected.-->
+                In <b id = 'year2'>YEAR</b>, <b id = 'countryName2'>COUNTRYNAME</b> has a total of <b id ='wasteCollected2'>0</b> tonnes of municipal waste collected.
                 Waste generated is not always collected by waste collection services, and it may be treated or disposed of by the economic units or households.
-                Therefore, the amount of generated waste is often larger than the amount of formally collected waste.
                  <br><br>
-                <b>From 'Waste Collection' to 'Exportation'</b>
+                <b style="font-size:1.5vw;font-weight: 400;">Exported Waste</b>
                  <br><br>
-                 Every year, thousands of shipping containers filled with recyclable waste are exported by wealthy countries to developing countries. This is because it is typically cheaper to export waste rather than develop local recycling infrastructures. 
-                It also reduces landfilling and can be lucrative for importers.
-  
-
+                <b id="exportedWaste2">0 %</b> of total waste goes abroad. Every year, thousands of shipping containers filled with recyclable waste are exported by wealthy countries to developing countries. This is because it is typically cheaper to export waste rather than develop local recycling infrastructures. 
                 </p>
               	</div>
               	<div id="reveal2">
-                 <p> <b>Waste Pretreatment</b>
-                 <br><br>
-                   The pretreatment processes are relatively straightforward and involve several stages of sorting, separating, size reduction, and in some cases, biological treatment. Capital costs for the pretreatment systems are moderate and generally worth the benefit of making a low-cost, readily available feedstock stream available 
+                 <p> <b style="font-size:1.5vw;font-weight: 400;">Waste Pre-Treatment</b>
+                 <br>
+                 <br>
+                  <b id = 'wastePretreatment2'>0 %</b> of total collected waste goes to pre-treatment.
+                   The pretreatment processes are relatively straightforward and involve several stages of sorting, separating, size reduction, and in some cases, biological treatment. 
               	</p>
               	</div>
                 <div id="reveal3">
                 <p>
-                    <b>Waste Treatment</b>
+                    <b  style="font-size:1.5vw;font-weight: 400; ">Waste Treatment</b>
                     <br><br>
-                    <b>Incineration to generate energy :</b>
+                    <b id="incinerateToEnergy2">0 %</b> <b style="font-size:1.2vw;font-weight: 400; ">Incineration To Generate Energy</b>
                      <br><br>
-                      consists in the controlled combustion of waste with energy recovery. Energy recovery means that evolving thermal energy is used for the production of steam, hot water or electric energy.                
+                      Incineration to energy consists in the controlled combustion of waste with energy recovery. Energy recovery means that evolving thermal energy is used for the production of steam, hot water or electric energy.                
                     <br><br>
-                    <b>Composting : </b>
+                    <b id="composting2">0 %</b><b style="font-size:1.2vw;font-weight: 400; "> Composting </b>
                       <br><br>
-                    refers to a biological process that submits biodegradable waste to anaerobic (biomethanization) or aerobic decomposition, and that results in a product that is recovered and can be used to increase soil fertility (products are compost and biogas).
+                    Composting refers to a biological process that results in a product that is recovered and can be used to increase soil fertility.
                 </p>
               	</div>
               	
@@ -109,16 +123,16 @@
 
               	<!--</div>-->
               	 <div id="reveal5">
-              	 <p> <b>Waste Diposal & Waste Recovery : </b>
+              	 <p> <b style="font-size:1.5vw;font-weight: 400; ">Waste Disposal & Waste Recovery </b>
                  <br><br>
-                 <b>Landfill</b>
+                 <b id="landfill2">0 %</b><b style="font-size:1.2vw;font-weight: 400; "> Landfill</b>
                   <br><br>
                   The final placement of waste into or onto the land in a controlled or uncontrolled way. The definition covers both landfilling in internal sites (i.e., where a generator of waste is carrying out its own waste disposal at the place of generation) and in external sites.                    <br><br>
-                  <b>Incineration</b>
+                  <b id="incineration2">0 %</b><b style="font-size:1.2vw;font-weight: 400; "> Incineration</b>
                   <br><br>
                     consists in the controlled combustion of waste without energy recovery. 
                   <br><br>
-                  <b>Waste Recovery</b>
+                  <b id="wasteRecovery2">0 %</b><b style="font-size:1.2vw;font-weight: 400; "> Waste Recovery</b>
                   <br><br>
                     Any final treatment or disposal different from recycling, incineration and landfilling. Examples include physical/chemical treatment, biological treatment, releasing of waste into water bodies and permanent storage.                  
                     </p>
@@ -129,19 +143,19 @@
             <!--Sankey Summary Section-->
              <!--Maybe showing all countries Section-->
         	<section id ='all_country'>
-        	    <h2>This diagram below shows the flow of total waste in  <b id = 'countryName'></b> generated by its population in <b id = 'year'></b>.</h2>
+        	    <h2>Flow of total waste per capita in <b id = 'countryName' style="color: #59F5FF;"></b>  in <b id = 'year'  style="color: #59F5FF;"></b>.</h2>
         	    <canvas id='allCountry_canvas'> </canvas>
         	    <svg id='svg_sankey'> </svg>
         	    <div id ='textdesc'>
         	        <p>
         	        Total of <b id ='wasteCollected'></b> KG of waste generated ends up being : 
-        	        <li> Landfilled :  <b id ='landFill'>0</b> %</li>
-        	        <li> Incinerated : <b id ='incinerate'>0</b> %</li>
-        	        <li> Recycled : <b id ='recycled'>0</b> %</li>
-        	        <li> Composted : <b id ='composted'>0</b> %</li>
-        	        <li> Re-used : <b id ='re_use'>0</b> %</li>
-        	        <li> Incenerated to generat energy : <b id ='incinerateToEnergy'>0</b> %</li>
-        	        <li> Exported: <b id ='exportWaste'>0</b> %</li>
+        	        <b style ="background-color:rgb(158, 202, 225);color:#262626;">Landfilled :  <b id ='landFill'>0</b> %</b>
+        	        / <b style ="background-color: rgb(198, 219, 239);color:#262626;">Incinerated : <b id ='incinerate'>0</b> %</b>
+        	       / <b style ="background-color: rgb(217, 217, 217);color:#262626;">Recycled : <b id ='recycled'>0</b> %</b>
+        	       /<b style ="background-color:rgb(188, 189, 220);color:#262626;">Composted : <b id ='composted'>0</b> %</b> 
+        	         / <b style ="background-color:rgb(150, 150, 150);color:#262626;" > Re-used : <b id ='re_use'>0</b> %</b>
+        	         / <b style ="background-color:rgb(117, 107, 177);">Incenerated to generat energy : <b id ='incinerateToEnergy'>0</b> %</b>
+        	        / <b style ="background-color: rgb(253, 141, 60);color:#262626;">Exported: <b id ='exportWaste'>0</b> %</b>
         	        </p>
         	    </div>
         	</section>

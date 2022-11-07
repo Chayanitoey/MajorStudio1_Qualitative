@@ -115,7 +115,7 @@ var dataset = {
             "source": 0,
             "target": 1,
             "value": 1,
-            "label": 0.3
+            "label": 0.5
         },
         {
             "source": 0,
@@ -199,158 +199,158 @@ var dataset = {
     ]
     
 }
-var dataset2 = {
-    "nodes": [
-        { 
-            "name" : "Collection",
-            "id": 0
-        },
-        { 
-            "name" : "Waste Pre-Treatment",
-            "id": 1
-        },
-        { 
-            "name" : "Exported Waste",
-            "id": 2
-        },
-        { 
-            "name" : "Sorting",
-            "id": 3
-        },
-        { 
-            "name" : "Biological Treatment",
-            "id": 4
-        },
-        { 
-            "name" : "Waste Treatment",
-            "id": 5
-        },
-        { 
-            "name" : "Incineration to generate energy",
-            "id": 6
-        },
-        { 
-            "name" : "Composting",
-            "id": 7
-        },
-        { 
-            "name" : "Waste Recovery",
-            "id": 8
-        },
-        { 
-            "name" : "Re-Use",
-            "id": 9
-        },
-        { 
-            "name" : "Recycling",
-            "id": 10
-        },
-        { 
-            "name" : "Waste Disposal",
-            "id": 11
-        },
-        { 
-            "name" : "Landfill",
-            "id": 12
-        },
-        { 
-            "name" : "Incineration",
-            "id": 13
-        },
-        { 
-            "name" : "Other",
-            "id": 14
-        }
-    ],
-    "links":[
-        {
-            "source": 0,
-            "target": 1,
-            "value": 1,
-            "label": 0.3
-        },
-        {
-            "source": 0,
-            "target": 2,
-            "value": 0.4,
-            "label": 0.5
-        },
-        {
-            "source": 1,
-            "target": 3,
-            "value": 0.5,
-            "label": 0.5
-        },
-        {
-            "source": 1,
-            "target": 4,
-            "value": 0.3,
-            "label": 0.3
-        },
-        {
-            "source": 4,
-            "target": 5,
-            "value": 0.3,
-            "label": 0.3
-        },
-        {
-            "source": 5,
-            "target": 6,
-            "value": 0.8,
-            "label": 0.09
-        },
-        {
-            "source": 5,
-            "target": 7,
-            "value": 0.8,
-            "label": 0.21
-        },
-        {
-            "source": 3,
-            "target": 8,
-            "value": 0.5,
-            "label": 0.3
-        },
-        {
-            "source": 3,
-            "target": 11,
-            "value": 0.7,
-            "label":0.2
-        },
-        {
-            "source": 8,
-            "target": 9,
-            "value": 0.7,
-            "label":0.2
-        },
-        {
-            "source": 8,
-            "target": 10,
-            "value": 0.7,
-            "label":0.3
-        }, 
-        {
-            "source": 11,
-            "target": 12,
-            "value": 0.6,
-            "label":0.1
-        },
-        {
-            "source": 11,
-            "target": 13,
-            "value": 0.6,
-            "label":0.1
-        },
-        {
-            "source": 11,
-            "target": 14,
-            "value": 0.6,
-            "label":0.1
-        }
+// var dataset2 = {
+//     "nodes": [
+//         { 
+//             "name" : "Collection",
+//             "id": 0
+//         },
+//         { 
+//             "name" : "Waste Pre-Treatment",
+//             "id": 1
+//         },
+//         { 
+//             "name" : "Exported Waste",
+//             "id": 2
+//         },
+//         { 
+//             "name" : "Sorting",
+//             "id": 3
+//         },
+//         { 
+//             "name" : "Biological Treatment",
+//             "id": 4
+//         },
+//         { 
+//             "name" : "Waste Treatment",
+//             "id": 5
+//         },
+//         { 
+//             "name" : "Incineration to generate energy",
+//             "id": 6
+//         },
+//         { 
+//             "name" : "Composting",
+//             "id": 7
+//         },
+//         { 
+//             "name" : "Waste Recovery",
+//             "id": 8
+//         },
+//         { 
+//             "name" : "Re-Use",
+//             "id": 9
+//         },
+//         { 
+//             "name" : "Recycling",
+//             "id": 10
+//         },
+//         { 
+//             "name" : "Waste Disposal",
+//             "id": 11
+//         },
+//         { 
+//             "name" : "Landfill",
+//             "id": 12
+//         },
+//         { 
+//             "name" : "Incineration",
+//             "id": 13
+//         },
+//         { 
+//             "name" : "Other",
+//             "id": 14
+//         }
+//     ],
+//     "links":[
+//         {
+//             "source": 0,
+//             "target": 1,
+//             "value": 1,
+//             "label": 0.5
+//         },
+//         {
+//             "source": 0,
+//             "target": 2,
+//             "value": 0.4,
+//             "label": 0.5
+//         },
+//         {
+//             "source": 1,
+//             "target": 3,
+//             "value": 0.5,
+//             "label": 0.5
+//         },
+//         {
+//             "source": 1,
+//             "target": 4,
+//             "value": 0.3,
+//             "label": 0.3
+//         },
+//         {
+//             "source": 4,
+//             "target": 5,
+//             "value": 0.3,
+//             "label": 0.3
+//         },
+//         {
+//             "source": 5,
+//             "target": 6,
+//             "value": 0.8,
+//             "label": 0.09
+//         },
+//         {
+//             "source": 5,
+//             "target": 7,
+//             "value": 0.8,
+//             "label": 0.21
+//         },
+//         {
+//             "source": 3,
+//             "target": 8,
+//             "value": 0.5,
+//             "label": 0.3
+//         },
+//         {
+//             "source": 3,
+//             "target": 11,
+//             "value": 0.7,
+//             "label":0.2
+//         },
+//         {
+//             "source": 8,
+//             "target": 9,
+//             "value": 0.7,
+//             "label":0.2
+//         },
+//         {
+//             "source": 8,
+//             "target": 10,
+//             "value": 0.7,
+//             "label":0.3
+//         }, 
+//         {
+//             "source": 11,
+//             "target": 12,
+//             "value": 0.6,
+//             "label":0.1
+//         },
+//         {
+//             "source": 11,
+//             "target": 13,
+//             "value": 0.6,
+//             "label":0.1
+//         },
+//         {
+//             "source": 11,
+//             "target": 14,
+//             "value": 0.6,
+//             "label":0.1
+//         }
     
-    ]
+//     ]
     
-}
+// } don't need this anymore!
 
 
 let landfilled = 0 ;
@@ -379,12 +379,10 @@ function getListValue() {
             createCircle(data);
             
       
-             
-   
-            document.getElementById('year').innerHTML = data.Year;
-            document.getElementById('countryName').innerHTML = data.Country;
-            document.getElementById('wasteCollected').innerHTML = data.Municipal_waste_collected;
+
+
             
+             //Updating the particle size based on the selected country
             if(data.Exported_Waste != 0){
             document.getElementById('exportWaste').innerHTML = data.Exported_Waste;
             }
@@ -455,6 +453,27 @@ function getListValue() {
 
               
             makegraph(dataset)
+            
+            
+            
+            //DOM manipulation updating the html text ** to reflect selected country
+   
+            document.getElementById('year').innerHTML = data.Year;
+            document.getElementById('countryName').innerHTML = data.Country;
+            document.getElementById('countryName1').innerHTML = data.Country;
+            document.getElementById('countryName2').innerHTML = data.Country;
+            document.getElementById('wasteCollected').innerHTML = data.Municipal_waste_collected;
+            document.getElementById('wasteCollected2').innerHTML = data.Municipal_waste_collected;
+            document.getElementById('year2').innerHTML = data.Year;
+            document.getElementById('exportedWaste2').innerHTML = data.Exported_Waste + ' %';
+            document.getElementById('wastePretreatment2').innerHTML =  Math.round(dataset.links[0].value * 10) + ' %';
+            document.getElementById('incinerateToEnergy2').innerHTML = data.Inceneration_to_energy + ' %';
+            document.getElementById('composting2').innerHTML = data.Composted + ' %';
+            document.getElementById('landfill2').innerHTML = data.landfilled + ' %';
+            document.getElementById('incineration2').innerHTML = data.Incinerated + ' %';
+            document.getElementById('wasteRecovery2').innerHTML = Math.round(dataset.links[7].value * 10)+ ' %';
+
+
 
             
             console.log('landfilled',dataset.links[11].value)
@@ -481,20 +500,22 @@ function makegraph(graph) {
   let freqCounter = 1; 
   d3.select('#svg_Sankey_country').remove();
 
-//   const canvas = 
-  d3.select('#allCountry_canvas')
-    .style('position', 'absolute')
-    .attr('width',1920)
-    .attr('height',1080);
+
     
     
-  const margin = { top: 1, right: 1, bottom: 6, left: 1 };
-  const width = 1920 - margin.left - margin.right;
-  const height = 1080 - margin.top - margin.bottom;
+  const margin = { top: 1, right: 1, bottom: 6, left: 0 };
+  const width = 2300 - margin.left - margin.right;
+  const height = 1000 - margin.top - margin.bottom;
 
   const formatNumber = d3.format('.0%');
   const format = d => `${formatNumber(d)}`;
-  const color = d3.scale.category10();
+  const color = d3.scale.category20c();
+  
+  //   const canvas = 
+  d3.select('#allCountry_canvas')
+    .style('position', 'absolute')
+    .attr('width', 2300)
+    .attr('height', 1000);
 
   const svg = d3.select('#svg_sankey')
     .style('position', 'absolute')
@@ -654,7 +675,7 @@ function makegraph(graph) {
       //context.remove();
       const context = d3.select('#allCountry_canvas').node().getContext('2d');
 
-      context.clearRect(0, 0, 1920, 1080);
+      context.clearRect(0, 0, 2300, 1000);
 
       context.fillStyle = 'gray';
       context.lineWidth = '1px';
@@ -682,6 +703,9 @@ function makegraph(graph) {
 
 }
 //creating circle + opulate dots based on amount of waste generated by that country 
+
+
+
 function createCircle(data){
     
         //update the circle * remove the old one*
@@ -692,7 +716,9 @@ function createCircle(data){
 		    // .duration(3000)
 		    // .ease(d3.easeLinear);
 		    
-
+//   var transit = d3.select(".container")
+        //   .transition()
+        //   .duration(650);
 
         var svg1 = d3
 		  .select('.container')
@@ -705,9 +731,13 @@ function createCircle(data){
 		var group = svg1
 		    .append('g')
 		    .attr("id","the_SVG_ID")
-		    .attr('transform', 'translate(800,600)')
+		    .attr('transform', 'translate(800,500)')
 		    .attr("width", w/1.5)
 		    .attr("height", h/1.5);
+		    
+      
+        //   .style("background-color", "red");
+	  
 		   
              //.attr("x", 0 )
              //.attr("y", 400 );
@@ -719,20 +749,20 @@ function createCircle(data){
 		 var txt = group
 		            .append("text")
 		            .attr("id","circle_text")
-                	.text(" In "+ data.Year+ ",  "+ data.Country + " has generated " + data.Average_waste_per_capita+ "Kg of waste per capita.")
                 	// .attr("x", (w/5))
                 	// .attr("y", 0 )
-                	.attr("dx", 600)
+                	.attr("dx", 560)
                 	.attr("dy", -350)
-                	.attr("width", 60)
+                	.attr("width", 20)
 		            .attr("height", 300)
+		          	.text(" In "+ data.Year+ ",  "+ data.Country + " has generated " + data.Average_waste_per_capita + "Kg of waste per capita.")
 		            .style('fill', 'rgba(250, 250, 250, 1)');
 	
 	     //making dots appearing ** noting on the rad value if we want the area to be bigger add more to Math.random()
 		  
 		for ( let i = 0; i < data.Average_waste_per_capita; i++) {
 		// setting radius size of the circle
-		    var rad = Math.sqrt(~~(Math.random() * 600 * 600)),
+		    var rad = Math.sqrt(~~(Math.random() * 500 * 500)),
 		        angle = Math.random() * Math.PI * 2,
 		        posx = Math.cos(angle),
 		        posy = Math.sin(angle);
@@ -768,7 +798,7 @@ function createCircle(data){
 
 
 		// I don't use margins for this graph, but they are included because they are helpful for properly offsetting the canvas particles in tick() and drawParticlePathOnCanvas() below
-		let margin = { top: 0, right: 30, bottom: 0, left:0};
+		let margin = { top: 13, right: 30, bottom: 0, left:0};
 
 
 		var simulation = d3.forceSimulation()
@@ -806,24 +836,24 @@ function createCircle(data){
 
 // // 		Set the link attributes for `line` and particles based on the value
 
-		dataset2.links.forEach(link => {
+		dataset.links.forEach(link => {
 		  link.transitionRate = link.value ;
 		  link.width = f(linkScale(link.transitionRate));
 		});
 
-		dataset2.links.forEach(link => {
+		dataset.links.forEach(link => {
 			link.freq = link.transitionRate;
 			link.particleSize = 10 * link.transitionRate ;
 			link.particleColor = 'rgba(89, 245, 255, 1)';
 		  });
 
 	  // Both the actual nodes and the nodes on the links need to have a force in order to minimize collisions AND overlaps
-	  simulation.nodes(dataset2.nodes);
-	  simulation.force("link", d3.forceLink(dataset2.links));
+	  simulation.nodes(dataset.nodes);
+	  simulation.force("link", d3.forceLink(dataset.links));
 
 // 	//Create links as lines
 	var links = svg.selectAll("path")
-		.data(dataset2.links)
+		.data(dataset.links)
 		.enter()
 		.append("path")
 		.attr('class', 'link')
@@ -831,14 +861,16 @@ function createCircle(data){
 		.style("stroke-width", function(d){ return d.width });
 
 	//Create nodes as circles
+	
 	var nodes = svg.selectAll("text")
-		.data(dataset2.nodes)
+		.data(dataset.nodes)
 		.enter()
 		.append("text")
 		.attr('id',d => d.name.replace(/\s/g, ''))
+		.attr("text-anchor", "middle")
 		.text( function(d) {return d.name;})
         .style("fill","rgba(250, 250, 250, 1)" )
-        .style('font-size', '30px')
+        .style('font-size', '1.5vw')
 		.call(d3.drag()  //Define what to do on drag events
 			.on("start", dragStarted)
 			.on("drag", dragging)
@@ -866,12 +898,26 @@ function createCircle(data){
     	     if( d.id == 3){
     	        return d.x =  margin.left + w/1.5 + 200;
     	    }
+    	    //biological treatment
+    	    if( d.id == 4){
+    	        return d.x =  w/2 -600;
+    	    }
+    	      //Waste Treatment
+    	    if( d.id ==5){
+    	        return d.x =  w/2 -400;
+    	    }
+    	    //Incineration to Energy
+              if( d.id ==6){
+    	        return d.x =  w/2 -500;
+    	    }
+    	    //Composting
     	     if( d.id == 7){
-    	        return d.x = margin.left +  w/5;
+    	        return d.x =  w/2 - 1100;
     	    }
     	     if( d.id == 8){
     	        return d.x = margin.left + w/1.2;
     	    }
+    	    //waste reuse
     	     if( d.id == 9){
     	        return d.x = w -400;
     	    }
@@ -879,9 +925,24 @@ function createCircle(data){
     	      if( d.id == 10){
     	        return d.x = w -800;
     	    }
+    	    //waste disposal
     	     if( d.id == 11){
     	        return d.x = w/2;
     	    }
+    	     //landfll
+            if( d.id == 12){
+    	        return d.x = w/2 -300;
+    	    }
+    	      //incineration
+            if( d.id == 13){
+    	        return d.x = w/2;
+    	    }
+    	    //other
+    	      if( d.id == 14){
+    	        return d.x = w/2 +300;
+    	    }
+    	    
+    	    
     	    else{
     	    return d.x = margin.left + Math.max( Math.min(w,d.x),(d.id+8)*10); 
     	    }
