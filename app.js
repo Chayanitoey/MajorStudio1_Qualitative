@@ -114,243 +114,91 @@ var dataset = {
         {
             "source": 0,
             "target": 1,
-            "value": 1,
+            "value": 0.5,
             "label": 0.5
         },
         {
             "source": 0,
             "target": 2,
-            "value": 2,
-            "label": 0.5
+            "value": 0.1,
+            "label": 0.1
         },
         {
             "source": 1,
             "target": 3,
-            "value": 0.5,
-            "label": 0.5
+            "value": 0.1,
+            "label": 0.
         },
         {
             "source": 1,
             "target": 4,
-            "value": 0.3,
+            "value": 0.2,
             "label": 0.3
         },
         {
             "source": 4,
             "target": 5,
-            "value": 0.3,
+            "value": 0.2,
             "label": 0.3
         },
         {
             "source": 5,
             "target": 6,
-            "value": 0.8,
+            "value": 0.2,
             "label": 0.09
         },
         {
             "source": 5,
             "target": 7,
-            "value": 0.8,
-            "label": 0.21
+            "value": 0.2,
+            "label": 0.2
         },
         {
             "source": 3,
             "target": 8,
-            "value": 0.5,
+            "value": 0.3,
             "label": 0.3
         },
         {
             "source": 3,
             "target": 11,
-            "value": 0.7,
+            "value": 0.3,
             "label":0.2
         },
         {
             "source": 8,
             "target": 9,
-            "value": 0.7,
+            "value": 0.3,
             "label":0.2
         },
         {
             "source": 8,
             "target": 10,
-            "value": 0.7,
+            "value": 0.3,
             "label":0.3
         }, 
         {
             "source": 11,
             "target": 12,
-            "value": 0.6,
+            "value": 0.1,
             "label":0.1
         },
         {
             "source": 11,
             "target": 13,
-            "value": 0.6,
+            "value": 0.3,
             "label":0.1
         },
         {
             "source": 11,
             "target": 14,
-            "value": 0.6,
+            "value": 0.1,
             "label":0.1
         }
     
     ]
     
 }
-// var dataset2 = {
-//     "nodes": [
-//         { 
-//             "name" : "Collection",
-//             "id": 0
-//         },
-//         { 
-//             "name" : "Waste Pre-Treatment",
-//             "id": 1
-//         },
-//         { 
-//             "name" : "Exported Waste",
-//             "id": 2
-//         },
-//         { 
-//             "name" : "Sorting",
-//             "id": 3
-//         },
-//         { 
-//             "name" : "Biological Treatment",
-//             "id": 4
-//         },
-//         { 
-//             "name" : "Waste Treatment",
-//             "id": 5
-//         },
-//         { 
-//             "name" : "Incineration to generate energy",
-//             "id": 6
-//         },
-//         { 
-//             "name" : "Composting",
-//             "id": 7
-//         },
-//         { 
-//             "name" : "Waste Recovery",
-//             "id": 8
-//         },
-//         { 
-//             "name" : "Re-Use",
-//             "id": 9
-//         },
-//         { 
-//             "name" : "Recycling",
-//             "id": 10
-//         },
-//         { 
-//             "name" : "Waste Disposal",
-//             "id": 11
-//         },
-//         { 
-//             "name" : "Landfill",
-//             "id": 12
-//         },
-//         { 
-//             "name" : "Incineration",
-//             "id": 13
-//         },
-//         { 
-//             "name" : "Other",
-//             "id": 14
-//         }
-//     ],
-//     "links":[
-//         {
-//             "source": 0,
-//             "target": 1,
-//             "value": 1,
-//             "label": 0.5
-//         },
-//         {
-//             "source": 0,
-//             "target": 2,
-//             "value": 0.4,
-//             "label": 0.5
-//         },
-//         {
-//             "source": 1,
-//             "target": 3,
-//             "value": 0.5,
-//             "label": 0.5
-//         },
-//         {
-//             "source": 1,
-//             "target": 4,
-//             "value": 0.3,
-//             "label": 0.3
-//         },
-//         {
-//             "source": 4,
-//             "target": 5,
-//             "value": 0.3,
-//             "label": 0.3
-//         },
-//         {
-//             "source": 5,
-//             "target": 6,
-//             "value": 0.8,
-//             "label": 0.09
-//         },
-//         {
-//             "source": 5,
-//             "target": 7,
-//             "value": 0.8,
-//             "label": 0.21
-//         },
-//         {
-//             "source": 3,
-//             "target": 8,
-//             "value": 0.5,
-//             "label": 0.3
-//         },
-//         {
-//             "source": 3,
-//             "target": 11,
-//             "value": 0.7,
-//             "label":0.2
-//         },
-//         {
-//             "source": 8,
-//             "target": 9,
-//             "value": 0.7,
-//             "label":0.2
-//         },
-//         {
-//             "source": 8,
-//             "target": 10,
-//             "value": 0.7,
-//             "label":0.3
-//         }, 
-//         {
-//             "source": 11,
-//             "target": 12,
-//             "value": 0.6,
-//             "label":0.1
-//         },
-//         {
-//             "source": 11,
-//             "target": 13,
-//             "value": 0.6,
-//             "label":0.1
-//         },
-//         {
-//             "source": 11,
-//             "target": 14,
-//             "value": 0.6,
-//             "label":0.1
-//         }
-    
-//     ]
-    
-// } don't need this anymore!
 
 
 let landfilled = 0 ;
@@ -539,7 +387,8 @@ function makegraph(graph) {
 
     const link = svg.append('g').selectAll('.link2')
       .data(graph.links)
-      .enter().append('path')
+      .enter()
+      .append('path')
         .attr('class', 'link2')
         .attr('d', path)
         .style('stroke-width', d => Math.max(1, d.dy))
@@ -550,18 +399,36 @@ function makegraph(graph) {
         })
         .sort((a, b) => b.dy - a.dy)
 
-    link
-      .on('mouseover', function () {
-        d3.select(this)
-          .style('stroke-opacity', 0.25);
-      })
-      .on('mouseout', function () {
-        d3.select(this)
-          .style('stroke-opacity', 0.15);
-      });
+    // link.on('mouseover', function () {
+    //     d3.select(this)
+    //       .style('stroke-opacity', 0.25);
+    //   })
+    //   .on('mouseout', function () {
+    //     d3.select(this)
+    //       .style('stroke-opacity', 0.15);
+    //   });
+	
+
+
+
+    //   link.on("mouseover", function(d) {      
+      
+    //     });
+    
+    // rect.on("mouseover", function(d) {      
+                
+    //         })                  
+   
+  
+    
+         	  	  
 
     link.append('title')
-      .text(d => `${format(d.label)} of ${d.source.name} → ${d.target.name}\n${format(d.value)} of ${graph.nodes[0].name}`)
+    .text(function(d) {
+            return d.source.name + " → " + 
+                d.target.name + "\n" + format(d.value/10); });
+                
+    //   .text(d => `${format(d.label)} of ${d.source.name} → ${d.target.name}\n${format(d.value)} of ${graph.nodes[0].name}`)
 
     const node = svg.append('g').selectAll('.node')
       .data(graph.nodes)
@@ -601,14 +468,14 @@ function makegraph(graph) {
         'font-weight': '200',
         'pointer-events': 'none',
         'fill': 'rgba(255,255,255)',
-        'font-size': '20px'
+        'font-size': '30px'
 
       })
       .text(d => d.name)
       .filter(d => d.x < width / 2)
         .attr('x', 6 + sankey.nodeWidth())
         .attr('text-anchor', 'start')
-        .style('font-size', '20px');
+        .style('font-size', '30px');
 
     function dragmove(d) {
       d3.select(this)
@@ -732,7 +599,7 @@ function createCircle(data){
 		    .append('g')
 		    .attr("id","the_SVG_ID")
 		    .attr('transform', 'translate(800,500)')
-		    .attr("width", w/1.5)
+		    .attr("width", w/1.8)
 		    .attr("height", h/1.5);
 		    
       
@@ -743,7 +610,6 @@ function createCircle(data){
              //.attr("y", 400 );
         
       
-        
 		 //adding text under the circle
 		    
 		 var txt = group
@@ -755,7 +621,7 @@ function createCircle(data){
                 	.attr("dy", -350)
                 	.attr("width", 20)
 		            .attr("height", 300)
-		          	.text(" In "+ data.Year+ ",  "+ data.Country + " has generated " + data.Average_waste_per_capita + "Kg of waste per capita.")
+		          	.text(" In "+ data.Year+ ",  "+ data.Country + " has generated "+  data.Average_waste_per_capita + "Kg of waste per capita." )
 		            .style('fill', 'rgba(250, 250, 250, 1)');
 	
 	     //making dots appearing ** noting on the rad value if we want the area to be bigger add more to Math.random()
@@ -843,7 +709,7 @@ function createCircle(data){
 
 		dataset.links.forEach(link => {
 			link.freq = link.transitionRate;
-			link.particleSize = 10 * link.transitionRate ;
+			link.particleSize = 20 * link.transitionRate ;
 			link.particleColor = 'rgba(89, 245, 255, 1)';
 		  });
 
@@ -1131,8 +997,8 @@ function createCircle(data){
 		  context.rect(
 		  	currentPos.x + margin.left,
 		  	currentPos.y + margin.top,
-		  	particles[p].link.particleSize,
-		  	particles[p].link.particleSize,
+		  	particles[p].link.particleSize*2, //w
+		  	particles[p].link.particleSize*2, //h
 		  	0,
 		  	10 * Math.PI 
 		  	);
@@ -1389,4 +1255,7 @@ function createCircle(data){
 								.setClassToggle("#WasteRecovery", "visible") // add class to reveal
 								.addTo(controller);
 // make the sankey Horizontal at the end// 
+
+
+//make select
 

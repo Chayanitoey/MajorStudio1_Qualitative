@@ -268,9 +268,10 @@ height: 50%;
 
 #circle_text{
   font-family: 'Lato', sans-serif;
-  font-weight:600;
-  font-size: 1vw;
+  font-weight:500;
+  font-size: 1.5vw;
   line-height: 1.5vw;
+  /*width:20%;*/
   color: #FAFAFA;
   margin-left: 10%;
 }
@@ -323,7 +324,7 @@ height: 50%;
         height:700px;
 				/*background: rgba(0, 0, 0, 0.65);*/
 				/*background: rgba(242, 66, 54, 0.65);*/
-				background: rgba(89, 245, 255, 0.6);
+				background: rgba(89, 245, 255,  0.9);
         border-radius: 20px;
 
         font-family: 'Lato', sans-serif;
@@ -371,7 +372,7 @@ height: 50%;
 				width: 30%;
         height:300px;
         
- 			  background: rgba(89, 245, 255, 0.6);
+ 			  background: rgba(89, 245, 255,  0.9);
         border-radius: 20px;
 
         font-family: 'Lato', sans-serif;
@@ -468,7 +469,7 @@ height: 50%;
 				width: 28%;
         height:850px;
         
-        background: rgba(89, 245, 255, 0.6);
+        background: rgba(89, 245, 255,  0.9);
         border-radius: 20px;
 
         font-family: 'Lato', sans-serif;
@@ -648,7 +649,7 @@ height: 50%;
   /*background-color: #262626;*/
   background: rgba(0, 0, 0, 0.65);
   width:100%;
-  height: 100vh;
+  height: 90vh;
   font-size: 1.6vw;
   font-family: 'Lato', sans-serif;
   display: flex;
@@ -706,4 +707,51 @@ a:visited {
 		opacity: 0;
 		transform: rotate(45deg) translate(20px, 20px);
 	}
+}
+select{
+  /*margin-top:20vh;*/
+    
+  min-width: 12em;
+  /*position: relative;*/
+  display: inline-block;
+  /*margin-right: 1em;*/
+  min-height: 2em;
+  max-height:2em;
+  /*overflow:hidden;*/
+  /*top: .5em;  */
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  color: #444;
+  
+  outline: none;
+  border: .06em solid transparent;
+  border-radius: 1em;
+  background-color: mix(#3694d7,#fff,25%);
+  
+  transition: .3s all ease-in-out;
+}
+
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+ 
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+ 
+
+.link2 {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+ 
+.link2:hover {
+  stroke-opacity: .5;
+
 }
